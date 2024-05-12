@@ -1,13 +1,13 @@
 # stickinthemud
 
-Just a little project exploiting django's lovely administration prowess for the entry of various things like objects or spells found in various games, inspired by mud.arctic.org, but potentially extensible to adjustable to others.
+Just a little project exploiting django's lovely administration prowess for the entry of various things like objects or spells found in various games, inspired by mud.arctic.org, but potentially extensible or adjustable to others.
 
 ## assumptions
 
 - my docker compose is set up in an environment where a previously existing database is already on a local docker network
 - if you are instantiation everything fresh across the board, you would define your database inline instead
 
-## initialiation
+## initialization
 
 - docker compose run stick django-admin startproject stick .
 - docker compose run stick python manage.py migrate
