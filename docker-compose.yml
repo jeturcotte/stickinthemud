@@ -1,0 +1,27 @@
+version: '3.9'
+
+services:
+  stick:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    command: python manage.py runserver 0.0.0.0:8888
+    volumes:
+      - .:/stick
+    ports:
+      - "9999:9999"
+    environment:
+      DB_NAME: stick
+      DB_HOST: host.docker.internal
+      DB_PORT: 3306
+      DB_USER: ...
+      DB_PASS: ...
+      DEBUG: True
+      ALLOWED_HOSTS: localhost
+    networks:
+      - emagery
+      
+networks:
+  emagery:
+    driver: bridge
+    external: true

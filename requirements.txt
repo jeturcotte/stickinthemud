@@ -1,0 +1,4 @@
+Django == 5.0.*
+mysqlclient == 2.2.*
+django-mysql == 4.12.*
+django-environ == 0.11.*
